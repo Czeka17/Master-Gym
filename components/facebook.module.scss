@@ -1,0 +1,79 @@
+@import './colors';
+.group{
+    padding:5em 0;
+    font-size: 1.3rem;
+    position: relative;
+    background-color: $secondary-color;
+    h2{
+        padding:0 1em;
+    }
+    &__ref{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+        button{
+            background-color: transparent;
+            text-decoration: none;
+            text-transform: uppercase;
+            border: 1px solid $third-color;
+            border-radius: 10px;
+            color: $third-color;
+            padding: 1em 2em;
+            text-align: center;
+            transition: .3s;
+            margin: 2em 0;
+            cursor: pointer;
+            &:hover{
+                background-color: $third-color;
+                color:$main-color;
+            }
+        }
+    }
+    &__img{
+    img{
+        position: absolute;
+        opacity: 0.4;
+        &:nth-child(1){
+            top: 30%;
+            left: 10%;
+            width: 10%;
+            animation: rotateLeft 60s infinite linear;
+        }
+        &:nth-child(2){
+            bottom: 15%;
+            right: 10%;
+            width: 8%;
+            animation: rotateRight 40s infinite linear;
+        }
+    }
+}
+}
+.underline {
+    width: 60px;
+    height: 4px;
+    background-color: $third-color;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@keyframes rotateRight{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotateLeft{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}

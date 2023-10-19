@@ -1,0 +1,108 @@
+@import "./colors";
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 0;
+    background-color: transparent; 
+    color: $third-color;
+    z-index: 999;
+    text-transform: uppercase;
+}
+.navbar{
+        i{
+            transition: .3s;
+        }
+        a{
+            position: relative;
+        }
+        a, a:after{
+            transition: .3s;
+        }
+        a, i{
+            color: $third-color;
+        }
+        a:hover,  a:hover i, a:focus{
+            color:$fourth-color;
+        }
+        a::after{
+            content: "";
+            background-color: $fourth-color;
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+        a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+}
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin:0 auto;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: $third-color; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar-toggler {
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    color: $third-color; 
+  }
+  
+  .navbar-nav {
+    margin-left: auto;
+  
+    .nav-link {
+      font-size: 1rem;
+      text-decoration: none;
+      color: $third-color;
+      margin: 0 1rem;
+    }
+  }
+  .bg-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #282A56;
+    transition: width 0.3s;
+  }
+
+
+.scrolled {
+  width: 100%;
+  animation: slideInFromLeft 0.3s;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.scrolled {
+  animation: slideOutToRight 0.3s;
+  animation-fill-mode: forwards;
+}

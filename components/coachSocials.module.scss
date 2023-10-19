@@ -1,0 +1,50 @@
+@import './colors';
+.coach__socials{
+    padding: 3em 0;
+    &-box{
+        position: relative;
+        &--text{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 2em 1em;
+            a{
+                text-decoration: none;
+                color: $third-color;
+                font-size: 2rem;
+                padding: 1em 0;
+            }
+            p{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: 0.3s;
+            }
+            p:hover{
+                color: $fourth-color;
+            }
+        }
+    }
+}
+.underline {
+    width: 60px;
+    height: 4px;
+    background-color: $third-color;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media(min-width:992px){
+    .coach__socials{
+        &-box{
+            &--text{
+                flex-direction: row;
+            }
+        }
+    }
+}
