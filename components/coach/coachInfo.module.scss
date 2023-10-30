@@ -1,4 +1,4 @@
-@import './colors';
+@import '../colors';
 .coach{
     position: relative;
     font-size: 1.3rem;
@@ -32,17 +32,6 @@
             padding-top: 4em;
         }
     }
-}
-.underline {
-    width: 60px;
-    height: 4px;
-    background-color: $third-color;
-    margin: 0 auto;
-    margin-bottom: 40px;
-}
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 @media(min-width:992px){

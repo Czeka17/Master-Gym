@@ -1,12 +1,11 @@
+import Title from "../Title";
 import Image from "next/image";
-import about from '../public/images/about-us.jpg'
-import dejv from '../public/images/IMG_5926.jpg'
+import about from '../../public/images/about-us.jpg'
+import dejv from '../../public/images/IMG_5926.jpg'
 import styles from './about.module.scss'
 function About(){
     return  <section id="about-us" className={styles["about-us"]}>
-    <h2 data-aos="fade-down" data-aos-delay="200">O nas</h2>
-        <div className={styles.underline}></div>
-    <div className={styles.container}>
+    <Title title="O nas">
         <div className={styles["about-us__box"]}>
             <div className="circle-component first-circle"></div>
             <div className="circle-component second-circle"></div>
@@ -24,7 +23,7 @@ function About(){
                 <Image src={about} alt="Zdjęcie przedstawiające sztangę na ciemnym tle"/>
             </div>
         </div>
-    </div>
+        </Title>
 </section>
 }
 export default About;

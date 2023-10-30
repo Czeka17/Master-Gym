@@ -1,13 +1,12 @@
 import styles from './contact.module.scss'
-import dumbell from '../public/images/dumbell.jpg'
+import dumbell from '../../public/images/dumbell.jpg'
 import Image from 'next/image';
 import {AiOutlineMail,AiOutlineInstagram} from 'react-icons/ai'
 import {FaFacebookF} from 'react-icons/fa'
+import Title from '../Title';
 function Contact(){
     return  <section className={styles.socials}>
-    <h2 data-aos="fade-up" data-aos-delay="400">Kontakt</h2>
-    <div className={styles.underline}></div>
-    <div className={styles.container}>
+    <Title title="kontakt">
         <div className={styles.socials__box}>
             <div className="circle-component first-circle"></div>
         <div className={styles.socials__img} data-aos="flip-up" data-aos-delay="400"><Image src={dumbell} alt="Zdjęcie ukazujące sztangę na ciemnej macie"/></div>
@@ -17,7 +16,7 @@ function Contact(){
         <a href="https://www.instagram.com/mastergymsilownia/" target="_blank"><p data-aos="fade-up" data-aos-delay="600"><AiOutlineInstagram/> Master Gym</p></a>
         </div>
     </div>
-    </div>
+    </Title>
 </section>
 }
 export default Contact;

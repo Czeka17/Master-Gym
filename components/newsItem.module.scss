@@ -1,0 +1,11 @@
+@import './colors';
+.newsitem{
+    width: 100%;
+    padding: 2em;
+    background-color:$secondary-color ;
+    border-radius: 15px;
+    transition: transform 0.3s;
+    &:hover{
+        transform: scale(1.05);
+    }
+}

@@ -1,0 +1,78 @@
+@import './colors';
+.offert-list{
+    padding: 2em 1em;
+    background-color: $secondary-color;
+    &__boxes{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 2em;
+    }
+    &__box{
+        position: relative;
+        align-items: center;
+        border: 1px solid $third-color;
+        border-radius: 10px;
+        text-align: center;
+        padding: 1em;
+        margin: 1em 0;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        overflow: hidden;
+        transition: .5s;
+        &:hover button, &:hover{
+            background-color: $third-color;
+            color:$main-color;
+            border: 1px solid $main-color;
+        }
+        h3{
+            font-weight: bold;
+            font-size: 2rem;
+        }
+        hr{
+            margin: 0.5em 0;
+        }
+        p{
+            padding: 0.1em 0;
+            letter-spacing: 2px;
+        }
+        .price-tag{
+            font-weight: bold;
+            font-size: 2rem;
+        }
+        button{
+            padding: 0.5em 1em;
+            background-color: transparent;
+            color: $third-color;
+            border: 1px solid $third-color;
+            border-radius: 10px;
+            transition: .5s;
+            cursor: pointer;
+            &:hover{
+                background-color: $main-color;
+                color: $third-color;
+            }
+        }
+    }
+    &__coach{
+        display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 1em;
+            a{
+            padding: 1em 2em;
+        text-decoration: none;
+        color: $third-color;
+        transition: color .5s;
+        border: 2px solid $third-color;
+        transition: .5s;
+        border-radius: 10px;
+        &:hover{
+            color: $main-color;
+            background-color: $third-color;
+        }
+    }
+    }
+}
+

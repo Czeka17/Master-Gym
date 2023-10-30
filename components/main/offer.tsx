@@ -1,11 +1,10 @@
 import styles from './offer.module.scss'
 import Image from 'next/image';
-import crossfit from '../public/images/crossfit.jpg'
+import crossfit from '../../public/images/crossfit.jpg'
+import Title from '../Title';
 function Offer(){
     return  <section className={styles.offer}>
-    <h2  data-aos="fade-down" data-aos-delay="200">Zobacz naszą ofertę</h2>
-    <div className={styles.underline}></div>
-    <div className={styles.container}>
+        <Title title='Zobacz naszą ofertę'>
     <div className={styles.offer__box} data-aos="fade-up" data-aos-delay="400">
     <div className={styles.offer__img}><Image src={crossfit} alt="Zdjęcie przedstawiające sprzęt do ćwiczeń"/>
     </div>
@@ -14,7 +13,7 @@ function Offer(){
         <p>Wybierz odpowiedni plan treningowy oraz ofertę dla siebie</p>
     <a href="offert.html" type="button" className={styles.offer__btn}>Sprawdź</a></div>
     </div>
-</div>
+    </Title>
 </section>
 }
 export default Offer;

@@ -1,15 +1,4 @@
-@import './colors';
-.underline {
-    width: 60px;
-    height: 4px;
-    background-color: $third-color;
-    margin: 0 auto;
-    margin-bottom: 40px;
-}
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
-}
+@import '../colors';
 .socials{
     padding: 5em 0;
     &__box{

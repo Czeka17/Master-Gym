@@ -1,4 +1,4 @@
-@import './colors';
+@import '../colors';
 .coach__socials{
     padding: 3em 0;
     &-box{
@@ -22,22 +22,13 @@
                 transition: 0.3s;
             }
             p:hover{
+                transform: scale(1.05);
                 color: $fourth-color;
             }
         }
     }
 }
-.underline {
-    width: 60px;
-    height: 4px;
-    background-color: $third-color;
-    margin: 0 auto;
-    margin-bottom: 40px;
-}
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
-}
+
 
 @media(min-width:992px){
     .coach__socials{

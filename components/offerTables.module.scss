@@ -1,0 +1,54 @@
+@import './colors';
+
+.table-list{
+    padding: 2em 0.5em;
+    margin-top: 1em;
+    &__box{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .carnets{
+        padding: 1em;
+    }
+    tr, th, td{
+        border: 1px solid $third-color;
+    }
+    tr:last-child{
+        font-weight: bold;
+    }
+    tr:nth-child(even){
+        background-color: $secondary-color;
+    }
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 2em 0em;
+        td,th{
+            padding: 1em;
+        }
+        }
+        &__contact{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            text-align: center;
+            a{
+                padding: 1em;
+                text-decoration: none;
+                color: $third-color;
+                transition: color .5s;
+                &:hover{
+                    color: $fourth-color;
+                }
+            }
+        }
+    }

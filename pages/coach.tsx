@@ -1,13 +1,13 @@
-import CoachInfo from "@/components/coachInfo";
-import CoachSocials from "@/components/coachSocials";
+import CoachInfo from "@/components/coach/coachInfo";
+import CoachSocials from "@/components/coach/coachSocials";
 import Footer from "@/components/footer";
 
-function Coach(){
-return <>
-<CoachInfo/>
-<CoachSocials/>
-<hr/>
-<Footer/>
-</>
+function Coach() {
+	return (
+		<>
+			<CoachInfo />
+			<CoachSocials />
+		</>
+	);
 }
 export default Coach;
