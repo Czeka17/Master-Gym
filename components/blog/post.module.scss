@@ -1,0 +1,15 @@
+.post{
+    padding: 5em 0;
+
+    &__image{
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+        object-fit:cover;
+        padding: 2em;
+    }
+    &__description{
+        width: 100%;
+        line-height: 2rem;
+    }
+}

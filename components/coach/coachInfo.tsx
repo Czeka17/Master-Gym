@@ -2,7 +2,7 @@ import styles from "./coachInfo.module.scss";
 import Image from "next/image";
 import dejv from "../../public/images/IMG_5923.jpg";
 import dejv2 from "../../public/images/IMG_5927.jpg";
-import Title from "../Title";
+import Title from "../shared/Title";
 function CoachInfo() {
 	return (
 		<section className={styles.coach}>

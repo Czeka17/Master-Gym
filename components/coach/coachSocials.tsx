@@ -1,7 +1,7 @@
 import styles from "./coachSocials.module.scss";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
-import Title from "../Title";
+import Title from "../shared/Title";
 function CoachSocials() {
 	return (
 		<section className={styles.coach__socials}>
