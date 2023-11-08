@@ -12,19 +12,25 @@
         position: relative;
         padding: 1em;
         z-index: 0;
+        width: 100%;
         img{
             border-radius: 20px;
             width: 100%;
+            height: 100%;
             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
         }
     }
     &__text{
+        width: 100%;
         display: flex;
         padding: 1em;
         flex-direction:column;
         text-align: center;
         justify-content: center;
         align-items: center;
+        p{
+            padding: 1em;
+        }
     }
     &__btn{
         text-decoration: none;

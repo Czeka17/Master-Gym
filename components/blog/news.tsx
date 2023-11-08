@@ -10,13 +10,16 @@ interface post {
 }
 function News() {
 	const [posts, setPosts] = useState<post[]>([]);
+	const [isLoading,setIsLoading] = useState(false)
 	useEffect(() => {
 		async function getPosts() {
+			setIsLoading(true)
 			try {
 				const response = await fetch("http://localhost:5000/api/blog");
 				if (response.ok) {
 					const data = await response.json();
 					setPosts(data.posts);
+					setIsLoading(false)
 				} else {
 					console.error(
 						"Failed to fetch data:",
@@ -29,18 +32,19 @@ function News() {
 			}
 		}
 		getPosts();
-	});
+	},[]);
 	return (
 		<section className={styles.news}>
 			<Title title='aktualności'>
-				<div className={styles.grid}>
+				{!isLoading && <div className={styles.grid}>
 					{posts.map((post) => (
 						<NewsItem
 							key={post._id}
 							Post={post}
 						/>
 					))}
-				</div>
+				</div>}
+				{isLoading && <p>Loading...</p>}
 			</Title>
 		</section>
 	);

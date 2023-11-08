@@ -1,6 +1,6 @@
 import Title from "../shared/Title";
 import Image from "next/image";
-import about from "../../public/images/about-us.jpg";
+import about from "../../public/images/silka.jpeg";
 import dejv from "../../public/images/IMG_5926.jpg";
 import styles from "./about.module.scss";
 function About() {

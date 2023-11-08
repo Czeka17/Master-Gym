@@ -3,7 +3,16 @@
     min-height: 90vh;
 }
 .grid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2em; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em 2em;
+}
+@media(min-width:992px){
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2em; 
+    }
 }

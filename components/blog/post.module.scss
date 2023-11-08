@@ -1,5 +1,6 @@
+@import '../shared/colors.scss';
 .post{
-    padding: 5em 0;
+    padding: 5em 2em;
 
     &__image{
         width: 100%;
@@ -11,5 +12,43 @@
     &__description{
         width: 100%;
         line-height: 2rem;
+        span{
+            font-weight: bold;
+            color:$fourth-color;
+        }
+        a {
+            position: relative;
+            transition: all 0.3s;
+            overflow: hidden;
+            margin:0;
+            padding: 0;
+            font-weight: bold;
+            color: $fourth-color;
+            border-bottom: 1px solid $fourth-color;
+            &:hover{
+                color:$secondary-color;
+                border-bottom: 1px solid $secondary-color
+            }
+            &:hover::before{
+                transform: translateY(0%);
+                transition: all 0.3s;
+                opacity: 1;
+            }
+         
+            &::before {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: $fourth-color;
+                z-index: -1;
+                transform: translateY(20%);
+                transition: all 0.3s;
+                opacity: 0;
+              }
+        }  
     }
 }
+

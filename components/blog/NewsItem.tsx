@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from "next/image";
 import styles from './newsItem.module.scss'
-import image from '../..//public/images/IMG_5926.jpg'
+import image from '../..//public/images/dumbbells-header.jpg'
 interface post{
     _id: string;
     title: string;

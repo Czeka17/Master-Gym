@@ -1,4 +1,10 @@
+import ContactForm from "@/components/contact/contact-form";
+import WeAreHere from "@/components/contact/we-are-here";
+
 function Contact(){
-    return 
+    return <>
+    <WeAreHere/>
+    <ContactForm/>
+    </>
 }
 export default Contact;
