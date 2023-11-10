@@ -6,19 +6,20 @@ interface post{
     _id: string;
     title: string;
     description:string;
-    date:string;
+    intro:string;
+    image:string;
 }
 interface NewsItemProps {
     Post: post;
   }
   const NewsItem: React.FC<NewsItemProps> = ({ Post }) => {
     return <Link href={`/blog/${Post._id}`} className={styles.newsitem}>
-        <div >
-            <Image src={image} alt="trener" className={styles.newsitem__image} />
+        <div>
+            <img src={Post.image} alt={Post.title} className={styles.newsitem__image} width={300} height={300}/>
         </div>
     <div className={styles.newsitem__title}>
         <h3>{Post.title}</h3>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto accusamus modi dolorum adipisci voluptatum quos quo veniam non vero quam?</p>
+        <p>{Post.intro}</p>
     </div>
     </Link>
 }

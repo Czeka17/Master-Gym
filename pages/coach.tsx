@@ -6,6 +6,7 @@ function Coach() {
 	return (
 		<>
 			<CoachInfo />
+			<hr/>
 			<CoachSocials />
 		</>
 	);

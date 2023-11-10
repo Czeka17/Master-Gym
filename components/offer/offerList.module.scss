@@ -3,10 +3,10 @@
     padding: 2em 1em;
     background-color: $secondary-color;
     &__boxes{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
     &__box{
         position: relative;
@@ -76,3 +76,14 @@
     }
 }
 
+@media(min-width:992px){
+    .offert-list{
+        &__boxes{
+            display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 2em;
+        }
+        
+    }
+}

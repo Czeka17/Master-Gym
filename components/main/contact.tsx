@@ -21,12 +21,14 @@ function Contact() {
 						/>
 					</div>
 					<div className={styles.socials__text}>
+						<a href="https://www.facebook.com/MasterGymSilownia" target="_blank">
 						<p
 							data-aos='fade-up'
 							data-aos-delay='200'
 						>
 							<FaFacebookF /> Master Gym
 						</p>
+						</a>
 						<p
 							data-aos='fade-up'
 							data-aos-delay='400'

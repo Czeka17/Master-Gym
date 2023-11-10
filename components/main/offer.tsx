@@ -2,6 +2,7 @@ import styles from "./offer.module.scss";
 import Image from "next/image";
 import crossfit from "../../public/images/silka2.jpeg";
 import Title from "../shared/Title";
+import Link from "next/link";
 function Offer() {
 	return (
 		<section className={styles.offer}>
@@ -20,13 +21,13 @@ function Offer() {
 					<div className='circle-component fourth-circle'></div>
 					<div className={styles.offer__text}>
 						<p>Wybierz odpowiedni plan treningowy oraz ofertę dla siebie</p>
-						<a
-							href='offert.html'
+						<Link
+							href={'/offer'}
 							type='button'
 							className={styles.offer__btn}
 						>
 							Sprawdź
-						</a>
+						</Link>
 					</div>
 				</div>
 			</Title>

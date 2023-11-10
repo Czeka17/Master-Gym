@@ -5,14 +5,16 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
+        flex-direction: column;
         &__card{
             background-color: $secondary-color;
             border: 1px solid $third-color;
             text-align: center;
             border-radius: 15px;
-            padding: 1em;
-            width: 40%;
-            height: 150px;
+            padding: 2em;
+            width: 80%;
+            height: 100%;
+            margin: 1em 0;
             hr{
                 margin: 1em;
             }
@@ -21,4 +23,17 @@
             }
         }
     }
+}
+@media(min-width:992px){
+   .promo{
+    &__box{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        &__card{
+            width: 40%;
+        }
+    }
+   }
 }

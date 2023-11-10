@@ -6,7 +6,8 @@ interface post {
 	_id: string;
 	title: string;
 	description: string;
-	date: string;
+	intro:string;
+	image:string;
 }
 function News() {
 	const [posts, setPosts] = useState<post[]>([]);
@@ -15,7 +16,7 @@ function News() {
 		async function getPosts() {
 			setIsLoading(true)
 			try {
-				const response = await fetch("http://localhost:5000/api/blog");
+				const response = await fetch(`${process.env.DATABASE}`);
 				if (response.ok) {
 					const data = await response.json();
 					setPosts(data.posts);

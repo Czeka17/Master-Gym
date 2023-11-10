@@ -37,13 +37,13 @@ function Layout(){
         <Link href="/contact" className={styles["nav-link"]}>Kontakt</Link>
       </div>
     </div>
-    {isOpen && <div className={styles.mobilenav}>
+     <div className={`${styles.mobilenav} ${isOpen ? styles.mobilenav__open : styles.mobilenav__closed}`}>
       <Link className={styles["nav-link"]} aria-current="page" href="/" onClick={() => setOpen(false)}>Home</Link>
         <Link href="/coach" className={styles["nav-link"]} onClick={() => setOpen(false)}>Trener</Link>
         <Link href="/offer" className={styles["nav-link"]} onClick={() => setOpen(false)}>Oferta</Link>
         <Link href="/blog" className={styles["nav-link"]}onClick={() => setOpen(false)}>Blog</Link>
         <Link href="/contact" className={styles["nav-link"]} onClick={() => setOpen(false)}>Kontakt</Link>
-        </div>}
+        </div>
   </div>
 </nav>
 }
