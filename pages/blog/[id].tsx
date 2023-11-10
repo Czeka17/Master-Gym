@@ -6,7 +6,8 @@ interface post{
     _id: string;
     title: string;
     description:string;
-    date:string;
+    image:string;
+    intro:string;
 }
 function PostPage(){
     const router = useRouter();
