@@ -16,7 +16,7 @@ function PostPage(){
     useEffect(() => {
        async function getPostById(){
         try{
-            const response = await fetch(`http://localhost:5000/api/blog/${id}`)
+            const response = await fetch(`https://master-gym-backend-production.up.railway.app/api/blog/${id}`)
             if (response.ok) {
                 const data = await response.json();
                 setPost(data.post);

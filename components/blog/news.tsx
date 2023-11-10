@@ -16,7 +16,7 @@ function News() {
 		async function getPosts() {
 			setIsLoading(true)
 			try {
-				const response = await fetch(`${process.env.DATABASE}`);
+				const response = await fetch(`https://master-gym-backend-production.up.railway.app/api/blog`);
 				if (response.ok) {
 					const data = await response.json();
 					setPosts(data.posts);
