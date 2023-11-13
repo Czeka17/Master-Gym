@@ -1,6 +1,6 @@
 import styles from "./coachSocials.module.scss";
 import { AiOutlineInstagram } from "react-icons/ai";
-import { FaFacebookF } from "react-icons/fa";
+import { FaFacebookF, FaPhone, FaUser } from "react-icons/fa";
 import Title from "../shared/Title";
 function CoachSocials() {
 	return (
@@ -26,6 +26,10 @@ function CoachSocials() {
 							</p>
 						</a>
 					</div>
+					<div className={styles.coach__socials__img}>
+					<FaPhone size={"2rem"}/>
+					<FaUser size={"2rem"}/>
+				</div>
 				</div>
 			</Title>
 		</section>

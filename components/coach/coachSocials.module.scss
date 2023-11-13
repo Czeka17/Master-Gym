@@ -27,6 +27,24 @@
             }
         }
     }
+    &__img{
+        svg{
+            position: absolute;
+            opacity: 0.4;
+            &:nth-child(1){
+                bottom: 0%;
+                left: 30%;
+                width: 10%;
+                animation: rotateLeft 60s infinite linear;
+            }
+            &:nth-child(2){
+                top: 15%;
+                right: 30%;
+                width: 8%;
+                animation: rotateRight 40s infinite linear;
+            }
+        }
+    }
 }
 
 
@@ -37,5 +55,23 @@
                 flex-direction: row;
             }
         }
+    }
+}
+
+
+@keyframes rotateRight{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotateLeft{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(-360deg);
     }
 }

@@ -1,5 +1,6 @@
 import Title from '../shared/Title';
 import styles from './we-are-here.module.scss'
+import {AiOutlineArrowDown} from 'react-icons/ai'
 function WeAreHere(){
     return  <section className={styles["we-are-here"]}>
     <Title title="Jesteśmy tutaj">
@@ -9,7 +10,7 @@ function WeAreHere(){
                 <p>Znajdziesz nas tutaj!</p>
                 <p>Wińsko, ul. Nowa 2</p>
                 <p>Lub...</p>
-                <a href="#contact-us"><img className="bounce-top"src="./dist/img/arrow.svg" alt=""/></a>
+                <a href='#contact'><AiOutlineArrowDown size={"1.6rem"}/></a>
             </div>
         </div>
         </Title>

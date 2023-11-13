@@ -9,6 +9,9 @@
     color: $third-color;
     z-index: 999;
     text-transform: uppercase;
+    &-brand{
+      z-index: 10000;
+    }
         i{
             transition: .3s;
         }

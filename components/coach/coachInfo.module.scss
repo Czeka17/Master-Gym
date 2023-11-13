@@ -7,6 +7,7 @@
     &__box{
         padding: 2em 0;
         &-info{
+            position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -24,14 +25,32 @@
             }
             &--text{
                 padding: 2em 0;
-                font-size: 1.4rem;
-                line-height: 2rem;
+                font-size: 1rem;
+                line-height: 1.6;
             }
         }
         h2{
             padding-top: 4em;
         }
     }
+     &__img{
+    svg{
+        position: absolute;
+        opacity: 0.4;
+        &:nth-child(1){
+            top: 0%;
+            left: 30%;
+            width: 10%;
+            animation: rotateLeft 60s infinite linear;
+        }
+        &:nth-child(2){
+            bottom: 15%;
+            right: 30%;
+            width: 8%;
+            animation: rotateRight 40s infinite linear;
+        }
+    }
+}
 }
 
 @media(min-width:992px){
@@ -48,11 +67,29 @@
                 }
                 &--text{
                     padding: 2em;
+                    font-size: 1.4rem;
                     &--right{
                         order: 0;
                     }
                 }
             }
         }
+    }
+}
+
+@keyframes rotateRight{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotateLeft{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(-360deg);
     }
 }

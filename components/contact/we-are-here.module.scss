@@ -11,21 +11,22 @@
         }
         &-text{
             text-align: center;
+            font-size: 1.6rem;
             letter-spacing: 2px;
             }
-            img{
-                padding-top: 2em;
+            svg{
+                margin-top:1em;
+                animation:scale 3s infinite;
             }
         }
     }
     .mapouter{
         position:relative;
-        width:430px;
         height:400px;
         background:#fff;
     }
-    .gmap_canvas{overflow:hidden;height:400px;width:430px}
-    .gmap_canvas iframe{ width:430px;
+    .gmap_canvas{overflow:hidden;height:400px;}
+    .gmap_canvas iframe{
         height:400px; position:relative;z-index:2}
     .gmap_iframe {
         height:400px!important;
@@ -35,5 +36,22 @@
             &__box{
                 flex-direction: row;
             }
+            .gmap_canvas{
+                width: 430px;
+            }
+            .gmap_canvas iframe{
+                width: 430px;
+            }
+        }
+    }
+    @keyframes scale{
+        0%{
+            transform: scale(1);
+        }
+        50%{
+            transform: scale(1.2);
+        }
+        100%{
+            transform: scale(1);
         }
     }

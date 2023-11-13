@@ -3,6 +3,8 @@ import Image from "next/image";
 import dejv from "../../public/images/IMG_5923.jpg";
 import dejv2 from "../../public/images/IMG_5927.jpg";
 import Title from "../shared/Title";
+import {GiWeightLiftingUp,GiWeight} from 'react-icons/gi'
+import { FaBeer } from "react-icons/fa";
 function CoachInfo() {
 	return (
 		<section className={styles.coach}>
@@ -15,6 +17,11 @@ function CoachInfo() {
 								alt='Zdjęcie przedtawiające trenera Master gym, Dawida Karasińskiego'
 							/>
 						</div>
+						<div className={styles.coach__img}>
+					<GiWeight size={42}/>
+					<GiWeightLiftingUp size={"7rem"}/>
+					
+				</div>
 						<div className={styles["coach__box-info--text"]}>
 							<p>
 								Nazywam się Dawid Karasiński. Jestem dwudziestolatkiem, który od
@@ -50,7 +57,13 @@ function CoachInfo() {
 								założonych celach siłowych, sylwetkowych oraz sportowych.
 							</p>
 						</div>
+						<div className={styles.coach__img}>
+					<GiWeight size={42}/>
+					<GiWeightLiftingUp size={"7rem"}/>
+					
+				</div>
 					</div>
+					
 				</div>
 			</Title>
 		</section>

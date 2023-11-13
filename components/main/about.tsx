@@ -11,8 +11,6 @@ function About() {
 		>
 			<Title title='O nas'>
 				<div className={styles["about-us__box"]}>
-					<div className='circle-component first-circle'></div>
-					<div className='circle-component second-circle'></div>
 					<div
 						data-aos='fade-up'
 						data-aos-delay='400'

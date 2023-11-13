@@ -1,7 +1,7 @@
 import Title from '../shared/Title';
 import styles from './contact-form.module.scss'
 function ContactForm(){
-    return <section className={styles['contact-us']} id="contact-us">
+    return <section className={styles['contact-us']} id="contact">
         <Title title='Kontakt'> 
         <div className={styles["contact-us__box"]}>
         <div className={styles["contact-us__info"]}>
