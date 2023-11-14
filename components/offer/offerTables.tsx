@@ -6,7 +6,6 @@ function OfferTables() {
 		<section className={styles["table-list"]}>
 			<Title title='karnety'>
 				<div className={styles["table-list__box"]}>
-					<div className='circle-component third-circle'></div>
 					<table
 						data-aos='flip-right'
 						data-aos-delay='200'
@@ -23,7 +22,7 @@ function OfferTables() {
 							</tr>
 							<tr>
 								<th>Rodzaj</th>
-								<th>Kwota</th>
+								<th>Kwota (za wejście)</th>
 							</tr>
 							<tr>
 								<td>1 wejście</td>

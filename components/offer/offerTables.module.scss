@@ -9,6 +9,7 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+ 
     }
     .carnets{
         padding: 1em;
@@ -49,6 +50,15 @@
                 &:hover{
                     color: $fourth-color;
                 }
+            }
+        }
+    }
+
+    @media(min-width:992px){
+        .table-list{
+            &__box{
+                flex-direction: row;
+                justify-content: center;
             }
         }
     }
