@@ -1,13 +1,18 @@
-import { useState } from 'react';
+import React, { useState, ChangeEvent, FormEvent } from 'react';
 import Title from '../shared/Title';
 import styles from './contact-form.module.scss'
 import FormModal from './form-modal';
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
 function ContactForm(){
-    const [formData, setFormData] = useState({
-        title: '',
-        email: '',
-        message: ''
-      });
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    message: '',
+  });
       const [modalIsOpen,setModalIsOpen] = useState(false);
       const [title,setTitle] = useState('')
       const [message,setMessage] = useState('')
@@ -16,7 +21,7 @@ function ContactForm(){
         setModalIsOpen(false)
       }
 
-      const handleSubmit = async (e) => {
+      const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setModalIsOpen(true)
         setTitle('Wysylanie...')
@@ -42,7 +47,7 @@ function ContactForm(){
           console.error('Error:', error);
         }
       };
-      const handleChange = (e) => {
+      const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({
           ...formData,
           [e.target.name]: e.target.value,
@@ -59,7 +64,7 @@ function ContactForm(){
         <div className={styles["contact-us__line"]}></div>
             <form onSubmit={handleSubmit} className={styles["contact-us__form"]}>
                 <div className={styles["contact-us__form-box"]}>
-                    <input type="text" id="title" name="title" required value={formData.title} onChange={handleChange} /> 
+                    <input type="text" id="name" name="name" required value={formData.name} onChange={handleChange} /> 
                     <span>Imię</span>
                 </div>
                 <div className={styles["contact-us__form-box"]} >
