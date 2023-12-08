@@ -1,7 +1,7 @@
 import styles from "./coachInfo.module.scss";
 import Image from "next/image";
-import dejv from "../../public/images/IMG_5923.jpg";
-import dejv2 from "../../public/images/IMG_5927.jpg";
+import dejv from "../../public/images/IMG_5923.webp";
+import dejv2 from "../../public/images/IMG_5927.webp";
 import Title from "../shared/Title";
 import {GiWeightLiftingUp,GiWeight} from 'react-icons/gi'
 import { FaBeer } from "react-icons/fa";

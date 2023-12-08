@@ -1,6 +1,6 @@
 import styles from "./offer.module.scss";
 import Image from "next/image";
-import crossfit from "../../public/images/silka2.jpeg";
+import crossfit from "../../public/images/silka2.webp";
 import Title from "../shared/Title";
 import Link from "next/link";
 function Offer() {
