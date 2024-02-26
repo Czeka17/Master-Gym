@@ -8,7 +8,7 @@ interface TitleProps {
 function Title({ title, children }:TitleProps) {
 	return (
 		<>
-			<h2>{title}</h2>
+			<h2 className={styles.title}>{title}</h2>
 			<div className={styles.underline}></div>
 			<div className={styles.container}>{children}</div>
 		</>

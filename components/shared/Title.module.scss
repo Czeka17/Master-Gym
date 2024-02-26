@@ -1,13 +1,15 @@
-@import './colors';
-
-.underline {
-    width: 60px;
-    height: 4px;
-    background-color: $third-color;
-    margin: 1em auto;
-    margin-bottom: 40px;
+@import "./colors";
+.title {
+	padding: 1em;
 }
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
+.underline {
+	width: 60px;
+	height: 4px;
+	background-color: $third-color;
+	margin: 1em auto;
+	margin-bottom: 40px;
+}
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
 }

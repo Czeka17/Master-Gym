@@ -3,29 +3,45 @@ import Image from "next/image";
 import about from "../../public/images/silka.webp";
 import dejv from "../../public/images/IMG_5926.webp";
 import styles from "./about.module.scss";
+import { motion, useAnimation } from "framer-motion";
+
+import { useInView } from "react-intersection-observer";
+
+import { useEffect } from "react";
 function About() {
+	const boxVariant = {
+		visible: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
+		hidden: { opacity: 0, scale: 0 },
+	};
+	const control = useAnimation();
+	const [ref, inView] = useInView();
+
+	useEffect(() => {
+		if (inView) {
+			control.start("visible");
+		}
+	}, [control, inView]);
 	return (
 		<section
 			id='about-us'
 			className={styles["about-us"]}
 		>
 			<Title title='O nas'>
-				<div className={styles["about-us__box"]}>
-					<div
-						data-aos='fade-up'
-						data-aos-delay='400'
-						className={`${styles["about-us__img"]} ${styles.second}`}
-					>
+				<motion.div
+					ref={ref}
+					variants={boxVariant}
+					initial='hidden'
+					whileInView='visible'
+					animate={control}
+					className={`${styles["about-us__box"]} box`}
+				>
+					<div className={`${styles["about-us__img"]} ${styles.second}`}>
 						<Image
 							src={dejv}
 							alt='Zdjęcie przedtawiające trenera Master gym, Dawida Karasińskiego'
 						/>
 					</div>
-					<div
-						data-aos='fade-up'
-						data-aos-delay='400'
-						className={styles["about-us__text"]}
-					>
+					<div className={styles["about-us__text"]}>
 						<h3>Trener</h3>
 						<p>
 							Nazywam się Dawid Karasiński. Jestem dwudziestolatkiem, który od
@@ -34,14 +50,17 @@ function About() {
 							jego funkcjonalności.{" "}
 						</p>
 					</div>
-				</div>
-				<div className={styles["about-us__box"]}>
+				</motion.div>
+				<motion.div
+					ref={ref}
+					variants={boxVariant}
+					initial='hidden'
+					whileInView='visible'
+					animate={control}
+					className={`${styles["about-us__box"]} box`}
+				>
 					<div className='circle-component third-circle'></div>
-					<div
-						data-aos='fade-up'
-						data-aos-delay='400'
-						className={styles["about-us__text"]}
-					>
+					<div className={styles["about-us__text"]}>
 						<h3>Siłownia</h3>
 						<p>
 							Celem przewodnim jest stworzenie takiego miejsca, w którym każda
@@ -51,17 +70,13 @@ function About() {
 							rzeczy, abyśmy mogli się cieszyć z najwyższej jakości treningów.
 						</p>
 					</div>
-					<div
-						data-aos='fade-up'
-						data-aos-delay='400'
-						className={styles["about-us__img"]}
-					>
+					<div className={styles["about-us__img"]}>
 						<Image
 							src={about}
 							alt='Zdjęcie przedstawiające sztangę na ciemnym tle'
 						/>
 					</div>
-				</div>
+				</motion.div>
 			</Title>
 		</section>
 	);

@@ -25,9 +25,11 @@ export default function App({
 	  }, []);
 	return (
 		<MainLayout>
+	
 			<Component {...pageProps} />
 			<hr />
 			<Footer />
+			
 		</MainLayout>
 	);
 }

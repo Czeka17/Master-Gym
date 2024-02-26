@@ -1,13 +1,29 @@
 import CoachInfo from "@/components/coach/coachInfo";
 import CoachSocials from "@/components/coach/coachSocials";
-import Footer from "@/components/shared/footer";
+import { motion } from "framer-motion";
 
 function Coach() {
 	return (
 		<>
-			<CoachInfo />
-			<hr/>
-			<CoachSocials />
+			<motion.div
+				initial='hidden'
+				animate='visible'
+				variants={{
+					hidden: {
+						opacity: 0,
+					},
+					visible: {
+						opacity: 1,
+						transition: {
+							duration: 0.5,
+						},
+					},
+				}}
+			>
+				<CoachInfo />
+				<hr />
+				<CoachSocials />
+			</motion.div>
 		</>
 	);
 }
