@@ -3,7 +3,6 @@ import { connectToDatabase } from '../../utils/db';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
-    const postId = Array.isArray(req.query.id) ? req.query.id[0] : req.query.id;
     const client = await connectToDatabase();
 
     const db = client.db();
