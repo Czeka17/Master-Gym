@@ -14,23 +14,24 @@ function Reviews() {
 	const [ref, inView] = useInView();
 
 	useEffect(() => {
-		if (inView) {
+		
 			control.start("visible");
 
-			// Load the Sociablekit script
+
 			const script = document.createElement("script");
 			script.src = "https://widgets.sociablekit.com/google-reviews/widget.js";
 			script.async = true;
 			script.defer = true;
 			document.body.appendChild(script);
-
+			console.log('script')
 			return () => {
-				// Clean up the script when component unmounts
+			
 				document.body.removeChild(script);
 			};
-		}
-		console.log("script");
-	}, [control, inView]);
+
+		
+		
+	}, [control]);
 	return (
 		<section className={classes.reviews}>
 			<Title title='Opinie'>
